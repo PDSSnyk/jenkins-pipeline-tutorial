@@ -24,7 +24,8 @@ pipeline {
           snykTokenId: '<Your Snyk API Token ID>',
           // place other parameters here
         )
-        }
+            }
+       }
         stage('Run Integration Tests') {
             steps {
                 echo 'Run only crucial integration tests from the source code' 
