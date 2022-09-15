@@ -34,8 +34,7 @@ pipeline {
         snykSecurity(
           snykInstallation: 'snyk@latest',
           snykTokenId: 'PDSSnyk-api-token',
-          failOnIssues: 'false',
-          additionalArguments: '-d'
+          failOnIssues: 'false'
           // place other parameters here
         )
             }
