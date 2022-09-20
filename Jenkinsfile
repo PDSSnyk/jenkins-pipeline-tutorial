@@ -36,6 +36,7 @@ pipeline {
           snykTokenId: 'PDSSnyk-api-token',
           failOnIssues: 'false'
           // place other parameters here
+          additionalArguements: '--code --debug'
         )
             }
        }
