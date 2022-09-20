@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        SNYK_HOME = tool name: 'Snyk'
+    }
     tools { 
         maven 'Maven' 
         jdk 'JDK' 
@@ -40,6 +43,11 @@ pipeline {
         )
             }
        }
+        stage('Snyk Code') {
+            steps {
+                sh "${SNYK_HOME}/snyk-linux code test --debug"
+            }
+        }
         stage('Run Integration Tests') {
             steps {
                 echo 'Run only crucial integration tests from the source code' 
