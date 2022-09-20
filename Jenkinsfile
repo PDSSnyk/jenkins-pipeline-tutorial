@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        SNYK_HOME = tool name: 'Snyk'
-    }
     tools { 
         maven 'Maven' 
         jdk 'JDK' 
