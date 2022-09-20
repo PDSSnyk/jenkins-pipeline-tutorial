@@ -42,7 +42,7 @@ pipeline {
        }
         stage('Snyk Code') {
             steps {
-                sh "${SNYK_HOME}/snyk-linux code test --debug"
+                sh "/var/jenkins_home/tools/io.snyk.jenkins.tools.SnykInstallation/snyk_latest/snyk-linux code test --debug"
             }
         }
         stage('Run Integration Tests') {
