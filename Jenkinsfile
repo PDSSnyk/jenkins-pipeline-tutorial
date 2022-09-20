@@ -42,7 +42,7 @@ pipeline {
        }
         stage('Snyk Code') {
             steps {
-                sh "/var/jenkins_home/tools/io.snyk.jenkins.tools.SnykInstallation/snyk_latest/snyk-linux code test"
+                sh "/var/jenkins_home/tools/io.snyk.jenkins.tools.SnykInstallation/snyk_latest/snyk-linux code test --org=pdssnyk"
             }
         }
         stage('Run Integration Tests') {
